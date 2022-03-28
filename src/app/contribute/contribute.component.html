@@ -1,0 +1,15 @@
+<section class="container-md">
+    <div *ngFor="let company of companies ">
+        <div class="row p-3 my-5 shadow company" (click)="selected(company.name)">
+            <p id="name" class="col-12 text-center">Company: <span class="fw-bold h5 text-success">{{company.name}}</span></p>
+            <p id="field" class="col-4">Field: {{company.field}}</p>
+            <p class="col-5"></p>
+            <p id="amount" class="col-3 mx-auto">Amount Raising: <span class="fw-bolder">{{company.amount_raising}}</span></p>
+            <p class="text-danger">Time: {{company.time}} remaining</p>
+            <div id="objective" class="col-12">
+                <p class="mb-2">Objective:</p>
+                <p>{{company.objective}}</p>
+            </div>
+        </div>
+    </div>
+</section>
